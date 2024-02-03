@@ -361,7 +361,8 @@ Conclusion:
 
 *Git is fun but it is not totally fun XD
 
-*ChatGPT advised me to do necessary commands to prevent conflicts like fetch and merge before pushing
+*After the last commit, the commit history in github showed me two commits I don't know why.
+I asked chatgpt that it is a failed commit, so after I successfully resolved the conflict and made a commit again (to say that the conflict is done) then push, it showed me two commits. Now ChatGPT advised me to do necessary commands to prevent conflicts like fetch and merge before pushing.
 
 -----------------------------
 
