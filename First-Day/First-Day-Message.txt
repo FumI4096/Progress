@@ -1,0 +1,368 @@
+This was the first time I jump into deep analysis towards git. I got into conflicts (I don't know how I got those conflicts) when I failed to push the current branch. I don't know what to do so I asked chatgpt and advised me to use fetch and merge when encountering this kind of methods. 
+
+Well I asked if what is the purpuse of git fetch and git merge:
+(Based on my understandings)
+
+git fetch is used to retrieve changes from a remote repository? (To be honest I don't know, I am confuse of this so-called remote repositories, branches and stuff)
+git merge is used to merge the current branch (which is the commit I did today) and the last branch(the recently commited which I did yesterday), I mean atleast I can quite understand it.
+
+To be honest there are tons of things that I need to learn towards git not just the commands but some of the words that are defined like origin, master, branches. For real, I do not not them ;-;
+
+Command Prompt History:
+
+Microsoft Windows [Version 10.0.22621.3007]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Seimon> D:
+
+D:\>git log
+fatal: not a git repository (or any of the parent directories): .git
+
+D:\> cd college bsit
+
+D:\COLLEGE BSIT> cd version control
+The system cannot find the path specified.
+
+D:\COLLEGE BSIT> cd version-control
+
+D:\COLLEGE BSIT\Version-Control> cd Task2
+
+D:\COLLEGE BSIT\Version-Control\Task2> git init
+Initialized empty Git repository in D:/COLLEGE BSIT/Version-Control/Task2/.git/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        First-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2> add First-Day/
+'add' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add First-Day/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   First-Day/Git-Log-Viewing-History.txt
+        new file:   First-Day/Learning-Commit-Amend.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "First Day progress"
+[master (root-commit) 4591e43] First Day progress
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 First-Day/Git-Log-Viewing-History.txt
+ create mode 100644 First-Day/Learning-Commit-Amend.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit 4591e4338acfb0fb60b3eccd3dce4de945d2f4e7 (HEAD -> master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day progress
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "First Day Progress" --amend
+[master 0b974ad] First Day Progress
+ Date: Sat Feb 3 17:14:02 2024 +0800
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 First-Day/Git-Log-Viewing-History.txt
+ create mode 100644 First-Day/Learning-Commit-Amend.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit 0b974ad832493385c45b5b2742832ef9065212e3 (HEAD -> master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        First-Day/Amend-Log-Screenshot.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add First-Day/Amend-Log-Screenshot.png
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "First Day Progress" --amend
+[master 5c24965] First Day Progress
+ Date: Sat Feb 3 17:14:02 2024 +0800
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 First-Day/Amend-Log-Screenshot.png
+ create mode 100644 First-Day/Git-Log-Viewing-History.txt
+ create mode 100644 First-Day/Learning-Commit-Amend.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b (HEAD -> master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+D:\COLLEGE BSIT\Version-Control\Task2>git remote add origin https://github.com/FumI4096/Progress.git
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+To https://github.com/FumI4096/Progress.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/FumI4096/Progress.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b (HEAD -> master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+D:\COLLEGE BSIT\Version-Control\Task2> git fetch origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 315 bytes | 0 bytes/s, done.
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+D:\COLLEGE BSIT\Version-Control\Task2> git log origin/master
+commit c8bacd6b3252af0af07e0e3e1a43d338e68f2d93 (origin/master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Fri Feb 2 15:02:17 2024 +0800
+
+    Committed the 12 months and the 4 weeks (First Commit)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git merge origin/master
+fatal: refusing to merge unrelated histories
+
+D:\COLLEGE BSIT\Version-Control\Task2> git merge --allow-unrelated-histories origin/master
+Merge made by the 'ort' strategy.
+ Month-1/Week1.txt  | 0
+ Month-1/Week2.txt  | 0
+ Month-1/Week3.txt  | 0
+ Month-1/Week4.txt  | 0
+ Month-10/Week1.txt | 0
+ Month-10/Week2.txt | 0
+ Month-10/Week3.txt | 0
+ Month-10/Week4.txt | 0
+ Month-11/Week1.txt | 0
+ Month-11/Week2.txt | 0
+ Month-11/Week3.txt | 0
+ Month-11/Week4.txt | 0
+ Month-12/Week1.txt | 0
+ Month-12/Week2.txt | 0
+ Month-12/Week3.txt | 0
+ Month-12/Week4.txt | 0
+ Month-2/Week1.txt  | 0
+ Month-2/Week2.txt  | 0
+ Month-2/Week3.txt  | 0
+ Month-2/Week4.txt  | 0
+ Month-3/Week1.txt  | 0
+ Month-3/Week2.txt  | 0
+ Month-3/Week3.txt  | 0
+ Month-3/Week4.txt  | 0
+ Month-4/Week1.txt  | 0
+ Month-4/Week2.txt  | 0
+ Month-4/Week3.txt  | 0
+ Month-4/Week4.txt  | 0
+ Month-5/Week1.txt  | 0
+ Month-5/Week2.txt  | 0
+ Month-5/Week3.txt  | 0
+ Month-5/Week4.txt  | 0
+ Month-6/Week1.txt  | 0
+ Month-6/Week2.txt  | 0
+ Month-6/Week3.txt  | 0
+ Month-6/Week4.txt  | 0
+ Month-7/Week1.txt  | 0
+ Month-7/Week2.txt  | 0
+ Month-7/Week3.txt  | 0
+ Month-7/Week4.txt  | 0
+ Month-8/Week1.txt  | 0
+ Month-8/Week2.txt  | 0
+ Month-8/Week3.txt  | 0
+ Month-8/Week4.txt  | 0
+ Month-9/Week1.txt  | 0
+ Month-9/Week2.txt  | 0
+ Month-9/Week3.txt  | 0
+ Month-9/Week4.txt  | 0
+ 48 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Month-1/Week1.txt
+ create mode 100644 Month-1/Week2.txt
+ create mode 100644 Month-1/Week3.txt
+ create mode 100644 Month-1/Week4.txt
+ create mode 100644 Month-10/Week1.txt
+ create mode 100644 Month-10/Week2.txt
+ create mode 100644 Month-10/Week3.txt
+ create mode 100644 Month-10/Week4.txt
+ create mode 100644 Month-11/Week1.txt
+ create mode 100644 Month-11/Week2.txt
+ create mode 100644 Month-11/Week3.txt
+ create mode 100644 Month-11/Week4.txt
+ create mode 100644 Month-12/Week1.txt
+ create mode 100644 Month-12/Week2.txt
+ create mode 100644 Month-12/Week3.txt
+ create mode 100644 Month-12/Week4.txt
+ create mode 100644 Month-2/Week1.txt
+ create mode 100644 Month-2/Week2.txt
+ create mode 100644 Month-2/Week3.txt
+ create mode 100644 Month-2/Week4.txt
+ create mode 100644 Month-3/Week1.txt
+ create mode 100644 Month-3/Week2.txt
+ create mode 100644 Month-3/Week3.txt
+ create mode 100644 Month-3/Week4.txt
+ create mode 100644 Month-4/Week1.txt
+ create mode 100644 Month-4/Week2.txt
+ create mode 100644 Month-4/Week3.txt
+ create mode 100644 Month-4/Week4.txt
+ create mode 100644 Month-5/Week1.txt
+ create mode 100644 Month-5/Week2.txt
+ create mode 100644 Month-5/Week3.txt
+ create mode 100644 Month-5/Week4.txt
+ create mode 100644 Month-6/Week1.txt
+ create mode 100644 Month-6/Week2.txt
+ create mode 100644 Month-6/Week3.txt
+ create mode 100644 Month-6/Week4.txt
+ create mode 100644 Month-7/Week1.txt
+ create mode 100644 Month-7/Week2.txt
+ create mode 100644 Month-7/Week3.txt
+ create mode 100644 Month-7/Week4.txt
+ create mode 100644 Month-8/Week1.txt
+ create mode 100644 Month-8/Week2.txt
+ create mode 100644 Month-8/Week3.txt
+ create mode 100644 Month-8/Week4.txt
+ create mode 100644 Month-9/Week1.txt
+ create mode 100644 Month-9/Week2.txt
+ create mode 100644 Month-9/Week3.txt
+ create mode 100644 Month-9/Week4.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit a3228f403e18651ad6335f27c22a1a947e47360e (HEAD -> master)
+Merge: 5c24965 c8bacd6
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:40:46 2024 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+commit c8bacd6b3252af0af07e0e3e1a43d338e68f2d93 (origin/master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Fri Feb 2 15:02:17 2024 +0800
+
+    Committed the 12 months and the 4 weeks (First Commit)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit a3228f403e18651ad6335f27c22a1a947e47360e (HEAD -> master)
+Merge: 5c24965 c8bacd6
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:40:46 2024 +0800
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+commit c8bacd6b3252af0af07e0e3e1a43d338e68f2d93 (origin/master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Fri Feb 2 15:02:17 2024 +0800
+
+    Committed the 12 months and the 4 weeks (First Commit)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "First Day Progress (Many conflicts happened and I used fetch and merge"
+On branch master
+nothing to commit, working tree clean
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "First Day Progress (Many conflicts happened and I used fetch and merge" --amend
+[master 4dac92c] First Day Progress (Many conflicts happened and I used fetch and merge
+ Date: Sat Feb 3 17:40:46 2024 +0800
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "First Day Progress (Many conflicts happened and I used fetch and merge)" --amend
+[master e4f9047] First Day Progress (Many conflicts happened and I used fetch and merge)
+ Date: Sat Feb 3 17:40:46 2024 +0800
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit e4f9047169cef7e712325a8597f25009dc6c61ed (HEAD -> master)
+Merge: 5c24965 c8bacd6
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:40:46 2024 +0800
+
+    First Day Progress (Many conflicts happened and I used fetch and merge)
+
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+commit c8bacd6b3252af0af07e0e3e1a43d338e68f2d93 (origin/master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Fri Feb 2 15:02:17 2024 +0800
+
+    Committed the 12 months and the 4 weeks (First Commit)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 69.75 KiB | 5.37 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/FumI4096/Progress.git
+   c8bacd6..e4f9047  master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>
+
+
+
+
+-----------------------------
+
+
+Conclusion:
+
+*Git is fun but it is not totally fun XD
+
+*ChatGPT advised me to do necessary commands to prevent conflicts like fetch and merge before pushing
+
+-----------------------------
+
+THE MORE YOU KNOW
