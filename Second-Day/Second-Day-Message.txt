@@ -1,0 +1,163 @@
+On this second day, I focused learning on some of the words that I commonly see in most git encounters, especially that these words are essentially used in version control.
+
+These are Local Repositories, Remote Repositories, git fetch, and git merge.
+
+On this second day, I also jump into depth analysis in using git fetch.
+
+----------------------------------
+
+Local Repository: Serves as an empty repository that is stored in your computer, mainly used to add files, add commits and branches.
+
+Remote Repository: Indicates the version of your repository placed in applications like github, it is used to keep track of your repository.
+
+git fetch: mostly fetches metadata (a data about data) or information about the remote branches from your local repository and fetches commits, branches from remote repositories (basically the commits inside the remote branches)
+
+git merge: mostly used to merge the current branch of the local repository and the given branch (git merge <branch_name>)
+
+
+Command Line History:
+
+*I encountered something like (END) and I do not know how to enter a command line, this was the second or third attempt of doing git, that is why in this command line, I already added the . Thanks to stackoverflow I saw that I need to press "q + enter" for a new line.
+
+C:\Users\Seimon> D:
+
+D:\>cd college bsit/version-control/task2
+
+D:\COLLEGE BSIT\Version-Control\Task2>git init
+Reinitialized existing Git repository in D:/COLLEGE BSIT/Version-Control/Task2/.git/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Second-Day/Understanding Fetch, Remote, and Local Repositories.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin
+
+D:\COLLEGE BSIT\Version-Control\Task2>git remote add origin https://github.com/FumI4096/Progress.git
+error: remote origin already exists.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log origin/master
+commit 920d96673e4e72e99a47718cdad07bf2deb56251 (origin/master)
+commit 920d96673e4e72e99a47718cdad07bf2deb56251 (origin/master)
+commit 920d96673e4e72e99a47718cdad07bf2deb56251 (origin/master)
+Author: FumI4096 <123810885+FumI4096@users.noreply.github.com>
+Date:   Sat Feb 3 18:17:10 2024 +0800
+
+    Update First-Day-Message.txt
+
+commit bfc6e7243913857e004c5d916789182817a4d44a (HEAD -> master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 18:11:07 2024 +0800
+
+    Added a message text file as a reflection
+
+commit e4f9047169cef7e712325a8597f25009dc6c61ed
+Merge: 5c24965 c8bacd6
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:40:46 2024 +0800
+
+    First Day Progress (Many conflicts happened and I used fetch and merge)
+
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+commit c8bacd6b3252af0af07e0e3e1a43d338e68f2d93
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Fri Feb 2 15:02:17 2024 +0800
+
+    Committed the 12 months and the 4 weeks (First Commit)
+
+q + enter 
+D:\COLLEGE BSIT\Version-Control\Task2>
+D:\COLLEGE BSIT\Version-Control\Task2> git push -u origin master
+To https://github.com/FumI4096/Progress.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/FumI4096/Progress.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git merge origin/master
+Updating bfc6e72..920d966
+Fast-forward
+ First-Day/First-Day-Message.txt | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Added second day progress"
+[master 1b4c937] Added second day progress
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Second-Day/Understanding Fetch, Remote, and Local Repositories.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 378 bytes | 189.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/FumI4096/Progress.git
+   920d966..1b4c937  master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2> git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log FETCH_HEAD
+commit 1b4c937bdc682fe504c44997e5e92f91251f2623 (HEAD -> master, origin/master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sun Feb 4 15:45:05 2024 +0800
+
+    Added second day progress
+
+commit 920d96673e4e72e99a47718cdad07bf2deb56251
+Author: FumI4096 <123810885+FumI4096@users.noreply.github.com>
+Date:   Sat Feb 3 18:17:10 2024 +0800
+
+    Update First-Day-Message.txt
+
+commit bfc6e7243913857e004c5d916789182817a4d44a
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 18:11:07 2024 +0800
+
+    Added a message text file as a reflection
+
+commit e4f9047169cef7e712325a8597f25009dc6c61ed
+Merge: 5c24965 c8bacd6
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:40:46 2024 +0800
+
+    First Day Progress (Many conflicts happened and I used fetch and merge)
+
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>
+D:\COLLEGE BSIT\Version-Control\Task2>
+D:\COLLEGE BSIT\Version-Control\Task2>
+D:\COLLEGE BSIT\Version-Control\Task2>
+D:\COLLEGE BSIT\Version-Control\Task2>
+
+-------------------------------------------
+
+Conclusion:
+
+- git fetch is a great way to understand what is happening on your local repository. It is a great way to keep track of the record of your local repository. 
+
+-------------------------------------------
+
+Apparently, some part of fetch confuses me, I just need to continue grinding and come up with an answer. :DD
