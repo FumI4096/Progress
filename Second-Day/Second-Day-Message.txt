@@ -17,7 +17,7 @@ git merge: mostly used to merge the current branch of the local repository and t
 
 Command Line History:
 
-*I encountered something like (END) and I do not know how to enter a command line, this was the second or third attempt of doing git, that is why in this command line, I already added the . Thanks to stackoverflow I saw that I need to press "q + enter" for a new line.
+*I encountered something like (END) and I do not know how to enter a command line, this was the second or third attempt of doing git, that is why in this command line, there are added files already. Thanks to stackoverflow I saw that I need to press "q + enter" for a new line.
 
 C:\Users\Seimon> D:
 
