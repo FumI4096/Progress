@@ -1,0 +1,5 @@
+Due to a busy schedue, I did not get the time on learning git. But I focused more on some of the essential features such as the working area and the staging area.
+
+Working Area - It is considered at the starting stage of your directory, here you basically add files and check for status, and update your file.
+
+Staging Area - By far the middle stage before committing changes, by the added files, you can either remove the file (meaning not accepting the updates) by using git reset.
