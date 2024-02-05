@@ -3,3 +3,322 @@ Due to a busy schedue, I did not get the time on learning git. But I focused mor
 Working Area - It is considered at the starting stage of your directory, here you basically add files and check for status, and update your file.
 
 Staging Area - By far the middle stage before committing changes, by the added files, you can either remove the file (meaning not accepting the updates) by using git reset.
+
+Command Line History:
+
+C:\Users\Seimon> D:
+
+D:\>cd college bsit/version-control/task2
+
+D:\COLLEGE BSIT\Version-Control\Task2>git init
+Reinitialized existing Git repository in D:/COLLEGE BSIT/Version-Control/Task2/.git/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 1.08 KiB | 4.00 KiB/s, done.
+From https://github.com/FumI4096/Progress
+   43d748c..70cec83  master     -> origin/master
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Third-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add Third-Day/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit 43d748cd28f91908b075e770d4f600fe5e5c6485 (HEAD -> master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sun Feb 4 17:00:28 2024 +0800
+
+    Added a Second Day Message as a reflection
+
+commit 1b4c937bdc682fe504c44997e5e92f91251f2623
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sun Feb 4 15:45:05 2024 +0800
+
+    Added second day progress
+
+commit 920d96673e4e72e99a47718cdad07bf2deb56251
+Author: FumI4096 <123810885+FumI4096@users.noreply.github.com>
+Date:   Sat Feb 3 18:17:10 2024 +0800
+
+    Update First-Day-Message.txt
+
+commit bfc6e7243913857e004c5d916789182817a4d44a
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 18:11:07 2024 +0800
+
+    Added a message text file as a reflection
+
+commit e4f9047169cef7e712325a8597f25009dc6c61ed
+Merge: 5c24965 c8bacd6
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:40:46 2024 +0800
+
+    First Day Progress (Many conflicts happened and I used fetch and merge)
+
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+commit c8bacd6b3252af0af07e0e3e1a43d338e68f2d93
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Fri Feb 2 15:02:17 2024 +0800
+
+    Committed the 12 months and the 4 weeks (First Commit)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log origin/master
+commit 70cec836e9feb4f9c9787a01676302d86b9bcd56 (origin/master)
+Author: FumI4096 <123810885+FumI4096@users.noreply.github.com>
+Date:   Sun Feb 4 17:02:53 2024 +0800
+
+    Update Second-Day-Message.txt
+
+commit 43d748cd28f91908b075e770d4f600fe5e5c6485 (HEAD -> master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sun Feb 4 17:00:28 2024 +0800
+
+    Added a Second Day Message as a reflection
+
+commit 1b4c937bdc682fe504c44997e5e92f91251f2623
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sun Feb 4 15:45:05 2024 +0800
+
+    Added second day progress
+
+commit 920d96673e4e72e99a47718cdad07bf2deb56251
+Author: FumI4096 <123810885+FumI4096@users.noreply.github.com>
+Date:   Sat Feb 3 18:17:10 2024 +0800
+
+    Update First-Day-Message.txt
+
+commit bfc6e7243913857e004c5d916789182817a4d44a
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 18:11:07 2024 +0800
+
+    Added a message text file as a reflection
+
+commit e4f9047169cef7e712325a8597f25009dc6c61ed
+Merge: 5c24965 c8bacd6
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:40:46 2024 +0800
+
+    First Day Progress (Many conflicts happened and I used fetch and merge)
+
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+commit c8bacd6b3252af0af07e0e3e1a43d338e68f2d93
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Fri Feb 2 15:02:17 2024 +0800
+
+    Committed the 12 months and the 4 weeks (First Commit)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log FETCH_HEAD
+commit 70cec836e9feb4f9c9787a01676302d86b9bcd56 (origin/master)
+Author: FumI4096 <123810885+FumI4096@users.noreply.github.com>
+Date:   Sun Feb 4 17:02:53 2024 +0800
+
+    Update Second-Day-Message.txt
+
+commit 43d748cd28f91908b075e770d4f600fe5e5c6485 (HEAD -> master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sun Feb 4 17:00:28 2024 +0800
+
+    Added a Second Day Message as a reflection
+
+commit 1b4c937bdc682fe504c44997e5e92f91251f2623
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sun Feb 4 15:45:05 2024 +0800
+
+    Added second day progress
+
+commit 920d96673e4e72e99a47718cdad07bf2deb56251
+Author: FumI4096 <123810885+FumI4096@users.noreply.github.com>
+Date:   Sat Feb 3 18:17:10 2024 +0800
+
+    Update First-Day-Message.txt
+
+commit bfc6e7243913857e004c5d916789182817a4d44a
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 18:11:07 2024 +0800
+
+    Added a message text file as a reflection
+
+commit e4f9047169cef7e712325a8597f25009dc6c61ed
+Merge: 5c24965 c8bacd6
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:40:46 2024 +0800
+
+    First Day Progress (Many conflicts happened and I used fetch and merge)
+
+commit 5c249650059aed82ec3dbd2dcdb2e4ea08b39d1b
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 3 17:14:02 2024 +0800
+
+    First Day Progress
+
+commit c8bacd6b3252af0af07e0e3e1a43d338e68f2d93
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Fri Feb 2 15:02:17 2024 +0800
+
+    Committed the 12 months and the 4 weeks (First Commit)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Added third day progress folder"
+[master 3f7474b] Added third day progress folder
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Third-Day/Third-Day-Message.txt
+ create mode 100644 Third-Day/Understanding-working-and-staging-areas.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+To https://github.com/FumI4096/Progress.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/FumI4096/Progress.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git merge origin master
+merge: origin - not something we can merge
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin/master
+fatal: 'origin/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git merge master
+Already up to date.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+To https://github.com/FumI4096/Progress.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/FumI4096/Progress.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin/master
+fatal: 'origin/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git merge origin/master
+Merge made by the 'ort' strategy.
+ Second-Day/Second-Day-Message.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 644 bytes | 214.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/FumI4096/Progress.git
+   70cec83..1c5cb90  master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Third-Day/Third-Day-Message.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Third-Day/Third-Day-Message.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add Third-Day/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Third-Day/Third-Day-Message.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Updated the Third Day Message"
+[master a1ec16b] Updated the Third Day Message
+ 1 file changed, 5 insertions(+)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 604 bytes | 302.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/FumI4096/Progress.git
+   1c5cb90..a1ec16b  master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>
