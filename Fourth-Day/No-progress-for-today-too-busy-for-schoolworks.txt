@@ -1,0 +1,89 @@
+C:\Users\Seimon> D:
+
+D:\>cd college bsit/vision-control/task2
+The system cannot find the path specified.
+
+D:\>cd college bsit/
+
+D:\COLLEGE BSIT>vision-control/
+'vision-control' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\COLLEGE BSIT>cd vision-control/
+The system cannot find the path specified.
+
+D:\COLLEGE BSIT>cd version-control/task2
+
+D:\COLLEGE BSIT\Version-Control\Task2>git init
+Reinitialized existing Git repository in D:/COLLEGE BSIT/Version-Control/Task2/.git/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Fourth-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add Fourth-Day/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Fourth-Day/No-progress-for-today-too-busy-for-schoolworks.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), 3.28 KiB | 18.00 KiB/s, done.
+From https://github.com/FumI4096/Progress
+   a1ec16b..34dfe57  master     -> origin/master
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin/master
+fatal: 'origin/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git merge origin/master
+Updating a1ec16b..34dfe57
+Fast-forward
+ Third-Day/Third-Day-Message.txt | 321 +++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 320 insertions(+), 1 deletion(-)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -u "Added Fourth Day Progress"
+error: pathspec 'Added Fourth Day Progress' did not match any file(s) known to git
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Added FOurth Day Progress"
+[master 9954a96] Added FOurth Day Progress
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Fourth-Day/No-progress-for-today-too-busy-for-schoolworks.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Added Fourth Day Progress" --amend
+[master f5d65fa] Added Fourth Day Progress
+ Date: Tue Feb 6 22:04:23 2024 +0800
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Fourth-Day/No-progress-for-today-too-busy-for-schoolworks.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 377 bytes | 125.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/FumI4096/Progress.git
+   34dfe57..f5d65fa  master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>
