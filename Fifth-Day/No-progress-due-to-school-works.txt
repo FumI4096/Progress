@@ -1,0 +1,51 @@
+Command Line History:
+
+C:\Users\Seimon> D:
+
+D:\> cd college bsit/version-control/task2
+
+D:\COLLEGE BSIT\Version-Control\Task2> git init
+Reinitialized existing Git repository in D:/COLLEGE BSIT/Version-Control/Task2/.git/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Fifth-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add .
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Added Fifth Day Progress"
+[master a481bd2] Added Fifth Day Progress
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Fifth-Day/No-progress-due-to-school-works.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 358 bytes | 119.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/FumI4096/Progress.git
+   f32e3c2..a481bd2  master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>
