@@ -1,0 +1,311 @@
+Command Line History:
+
+C:\Users\Seimon> D:
+
+D:\> college bsit/version-control/task2
+'college' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\> cd college bsit/version-control/task2
+
+D:\COLLEGE BSIT\Version-Control\Task2>git init
+Reinitialized existing Git repository in D:/COLLEGE BSIT/Version-Control/Task2/.git/
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Seventh-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit 473c7718b7660c2c07547cead1f84d14868aa0e2 (HEAD -> master, origin/master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Thu Feb 8 22:43:55 2024 +0800
+
+    updated No-progress-due-to-school-works.txt
+
+commit 84fe77edc350ea40bfb6e63a1d6e71df3ec2b99a
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Thu Feb 8 22:41:53 2024 +0800
+
+    Added sixth day folder
+
+commit c63a45607044b6b8c6a9ff6ab31cae7c157b8435
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Wed Feb 7 21:18:06 2024 +0800
+
+    Updated the file inside the fifth day progress
+
+commit a481bd2782f2142309d572cbba3e141a68c38a20
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Wed Feb 7 21:15:42 2024 +0800
+
+    Added Fifth Day Progress
+
+commit f32e3c29935437f5ec68e9de0e404d37fcddbe04
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Tue Feb 6 22:09:27 2024 +0800
+
+    Updated the fileNo-progress-for-today-too-busy-for-schoolworks.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch
+
+D:\COLLEGE BSIT\Version-Control\Task2>git checkout -b editbranch
+Switched to a new branch 'editbranch'
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch editbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Seventh-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add Seventh-Day/file1.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status Seventh-Day/
+On branch editbranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Seventh-Day/file1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Seventh-Day/Understanding-branches.txt
+        Seventh-Day/file2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git checkout master
+Switched to branch 'master'
+A       Seventh-Day/file1.txt
+Your branch is up to date with 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add Seventh-Day/Understanding-branches.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Added Seventh-Day Progress"
+[master dea1ac2] Added Seventh-Day Progress
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Seventh-Day/Understanding-branches.txt
+ create mode 100644 Seventh-Day/file1.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 363 bytes | 181.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/FumI4096/Progress.git
+   473c771..dea1ac2  master -> master
+branch 'master' set up to track 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git checkout editbranch
+Switched to branch 'editbranch'
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch editbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Seventh-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin editbranch
+fatal: couldn't find remote ref editbranch
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit 473c7718b7660c2c07547cead1f84d14868aa0e2 (HEAD -> editbranch)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Thu Feb 8 22:43:55 2024 +0800
+
+    updated No-progress-due-to-school-works.txt
+
+commit 84fe77edc350ea40bfb6e63a1d6e71df3ec2b99a
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Thu Feb 8 22:41:53 2024 +0800
+
+    Added sixth day folder
+
+commit c63a45607044b6b8c6a9ff6ab31cae7c157b8435
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Wed Feb 7 21:18:06 2024 +0800
+
+    Updated the file inside the fifth day progress
+
+commit a481bd2782f2142309d572cbba3e141a68c38a20
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Wed Feb 7 21:15:42 2024 +0800
+
+    Added Fifth Day Progress
+
+commit f32e3c29935437f5ec68e9de0e404d37fcddbe04
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Tue Feb 6 22:09:27 2024 +0800
+
+    Updated the fileNo-progress-for-today-too-busy-for-schoolworks.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch editbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Seventh-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status Seventh-Day/
+On branch editbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Seventh-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status Seventh-Day
+On branch editbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Seventh-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add .
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch editbranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Seventh-Day/file2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch editbranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Seventh-Day/file2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Seventh-Day/file2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add .
+
+D:\COLLEGE BSIT\Version-Control\Task2>git checkout master
+Switched to branch 'master'
+A       Seventh-Day/file2.txt
+Your branch is up to date with 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Seventh-Day/file2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git merge editbranch
+Already up to date.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git log
+commit dea1ac207b1f89ff380ba935904700c76ef54cd3 (HEAD -> master, origin/master)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Sat Feb 10 18:18:46 2024 +0800
+
+    Added Seventh-Day Progress
+
+commit 473c7718b7660c2c07547cead1f84d14868aa0e2 (editbranch)
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Thu Feb 8 22:43:55 2024 +0800
+
+    updated No-progress-due-to-school-works.txt
+
+commit 84fe77edc350ea40bfb6e63a1d6e71df3ec2b99a
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Thu Feb 8 22:41:53 2024 +0800
+
+    Added sixth day folder
+
+commit c63a45607044b6b8c6a9ff6ab31cae7c157b8435
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Wed Feb 7 21:18:06 2024 +0800
+
+    Updated the file inside the fifth day progress
+
+commit a481bd2782f2142309d572cbba3e141a68c38a20
+Author: Seimon Maiquez <Sesmaiquez@gmail.com>
+Date:   Wed Feb 7 21:15:42 2024 +0800
+
+    Added Fifth Day Progress
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Seventh-Day/file2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>add Seventh-Day/file2.txt
+'add' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add Seventh-Day/file2.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Seventh-Day/file2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Added file2.txt"
+[master e5cebab] Added file2.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Seventh-Day/file2.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+D:\COLLEGE BSIT\Version-Control\Task2>git branch -d editbranch
+Deleted branch editbranch (was 473c771).
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 367 bytes | 122.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/FumI4096/Progress.git
+   dea1ac2..e5cebab  master -> master
+branch 'master' set up to track 'origin/master'.
+
+
+---------------------------------------------------------
+
+Honestly, I got confuse on implementing branches. First of all I thought if making branche will have its own working and staging area, I really thought that the main or master branch has its own working and staging area. ChatGPT pointed me out that branches do not have working and staging area, they are globally spaces between the local repository and remote repository. Moreover, I got confuse when switching branches to another, whenever I switch to the master branch, the added file in the other branch will be updated and added in the working directory (or area) and it will also leave a message as well that the file is added. From those scenarios, I realized that branches are just for editing purposes, meaning it is a tool commonly for experimenting and provide features.
+
+I may need to experiment more on branches XD
