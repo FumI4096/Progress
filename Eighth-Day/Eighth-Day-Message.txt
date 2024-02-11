@@ -1,0 +1,146 @@
+Command Line History
+
+C:\Users\Seimon> D:
+
+D:\> college bsit/version-control/task2
+'college' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\>cd college bsit/version-control/task2
+
+D:\COLLEGE BSIT\Version-Control\Task2>git checkout -b editbranch
+Switched to a new branch 'editbranch'
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch editbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Eighth-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status Eight-Day/
+On branch editbranch
+nothing to commit, working tree clean
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status Eight-Day
+On branch editbranch
+nothing to commit, working tree clean
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status Eighth-Day/
+On branch editbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Eighth-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status Eighth-Day
+On branch editbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Eighth-Day/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add Eighth-Day/thisfileforbranch1.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch editbranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Eighth-Day/thisfileforbranch1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Eighth-Day/Understanding-branches-2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch editbranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Eighth-Day/thisfileforbranch1.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Eighth-Day/thisfileforbranch1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Eighth-Day/Understanding-branches-2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add Eighth-Day/thisfileforbranch1.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Merge editbranch to master branch"
+[editbranch 7e0cce4] Merge editbranch to master branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Eighth-Day/thisfileforbranch1.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+D:\COLLEGE BSIT\Version-Control\Task2>git merge editbranch
+Updating b5734a1..7e0cce4
+Fast-forward
+ Eighth-Day/thisfileforbranch1.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Eighth-Day/thisfileforbranch1.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Eighth-Day/Understanding-branches-2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\COLLEGE BSIT\Version-Control\Task2>git add .
+
+D:\COLLEGE BSIT\Version-Control\Task2>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Eighth-Day/Understanding-branches-2.txt
+
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin master
+From https://github.com/FumI4096/Progress
+ * branch            master     -> FETCH_HEAD
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin
+
+D:\COLLEGE BSIT\Version-Control\Task2>git fetch origin editbranch
+fatal: couldn't find remote ref editbranch
+
+D:\COLLEGE BSIT\Version-Control\Task2>git commit -m "Added understanding-branch file"
+[master 7198dbc] Added understanding-branch file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Eighth-Day/Understanding-branches-2.txt
+
+D:\COLLEGE BSIT\Version-Control\Task2>git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 732 bytes | 183.00 KiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/FumI4096/Progress.git
+   b5734a1..7198dbc  master -> master
+branch 'master' set up to track 'origin/master'.
+
+--------------------------------------------------------------------
+
+Now I understand how to use branch XD before checking out, be sure to commit before checking out. I think it is quite logical, since when you finalized the files in that branch, it is common to put use the git commit command.
